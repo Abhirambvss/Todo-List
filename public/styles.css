@@ -1,0 +1,42 @@
+body{
+background-color: #6D81FF;}
+
+header{
+    border: 15px;
+    border-style: hidden;
+    padding: 0.1rem;
+    background: #2C3795;
+    text-align:initial;
+  box-shadow: 0 0 10px 0 rgb(65,51,28);
+}
+.note {
+  background: #fff;
+  border-radius: 7px;
+  box-shadow: 0 2px 5px #ccc;
+  padding: 10px;
+  width: 240px;
+  margin: 16px;
+  float: left;
+}
+.note h1 {
+  font-family:'-apple-system';
+  font-size: 1.1em;
+  margin-bottom: 6px;
+}
+.note p {
+  font-size: 1.1em;
+  margin-bottom: 10px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.font-color{
+color: rgb(219,234,237);} 
+footer {
+  color: beige;
+  position:absolute;
+  text-align: center;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
