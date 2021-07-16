@@ -1,8 +1,11 @@
-import React from "react";
+import React,{useState} from "react";
 import Header from "./header";
 import Footer from "./footer";
 import Note from "./note";
 import noteItems from "../noteItems";
+import CreateNote from "./createNote";
+
+
 
 function newNotes(newNote){
     return(<Note
@@ -14,11 +17,43 @@ function newNotes(newNote){
 }
 
 function App(){
+
+    const [notes, setNotes] = useState([]);
+
+    function addNote(newNote){
+        setNotes(prevNotes =>{
+           return [...prevNotes, newNote];
+        });
+    }
+
+    function deleteNote(id) {
+        setNotes(prevNotes => {
+          return prevNotes.filter((noteItem, index) => {
+            return index !== id;
+          });
+        });
+      }
+
     return(
         <div>
            <Header />
-           {noteItems.map(newNotes)}
+           <CreateNote 
+               onAdd={addNote}
+           />
+           {notes.map((newnoteItem, index) =>{
+               return (
+                   <Note 
+                   key={index}
+            id={index}
+            title ={newnoteItem.title}
+                content={newnoteItem.content} 
+                onDelete={deleteNote}
+                />
+               );
+           })}
+        
            <Footer />
+           
         </div>
     );
 }
