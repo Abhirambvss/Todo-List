@@ -2,7 +2,6 @@ import React,{useState} from "react";
 import Header from "./header";
 import Footer from "./footer";
 import Note from "./note";
-import noteItems from "../noteItems";
 import CreateNote from "./createNote";
 
 
