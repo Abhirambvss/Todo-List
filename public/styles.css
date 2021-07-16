@@ -40,3 +40,35 @@ footer {
   left: 0;
   right: 0;
 }
+form {
+  position: relative;
+  width: 480px;
+  margin: 30px auto 20px auto;
+  background: #fff;
+  padding: 15px;
+  border-radius: 7px;
+  box-shadow: 0 1px 5px rgb(138, 137, 137);
+}
+form input,
+form textarea {
+  width: 100%;
+  border: none;
+  padding: 4px;
+  outline: none;
+  font-size: 1.2em;
+  font-family: 'sans-seriff';
+  resize: none;
+}
+form button {
+  position: relative;
+  right: -427px;
+  bottom: -10px;
+  
+}
+
+.note button{
+  position: relative;
+  right: -184px;
+  bottom: -7px;
+  background-color: grey;
+}
